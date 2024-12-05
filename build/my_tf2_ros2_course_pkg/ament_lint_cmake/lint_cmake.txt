@@ -1,0 +1,13 @@
+-- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+ - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml
+
+CMakeLists.txt:26: Tab found; please use spaces [whitespace/tabs]
+CMakeLists.txt:27: Tab found; please use spaces [whitespace/tabs]
+CMakeLists.txt:28: Tab found; please use spaces [whitespace/tabs]
+
+
+3 errors
+
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml'

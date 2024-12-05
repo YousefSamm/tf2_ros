@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="my_tf2_ros2_course_pkg.pep257"
+  tests="5"
+  errors="0"
+  failures="3"
+  time="0.024"
+>
+  <testcase
+    name="./launch/publish_static_transformom_odom_to_world.launch.py"
+    classname="my_tf2_ros2_course_pkg.pep257"/>
+  <testcase
+    name="./scripts/cam_bot_odom_to_tf_pub.py"
+    classname="my_tf2_ros2_course_pkg.pep257"/>
+  <testcase
+    name="D200 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50)"
+    classname="my_tf2_ros2_course_pkg.pep257"
+  >
+      <failure message="D200: One-line docstring should fit on one line with quotes (found 3)"/>
+  </testcase>
+  <testcase
+    name="D202 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50)"
+    classname="my_tf2_ros2_course_pkg.pep257"
+  >
+      <failure message="D202: No blank lines allowed after function docstring (found 1)"/>
+  </testcase>
+  <testcase
+    name="D401 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50)"
+    classname="my_tf2_ros2_course_pkg.pep257"
+  >
+      <failure message="D401: First line should be in imperative mood; try rephrasing (found 'This')"/>
+  </testcase>
+  <system-out>Checked files:
+* ./launch/publish_static_transformom_odom_to_world.launch.py
+* ./scripts/cam_bot_odom_to_tf_pub.py
+* ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py</system-out>
+</testsuite>

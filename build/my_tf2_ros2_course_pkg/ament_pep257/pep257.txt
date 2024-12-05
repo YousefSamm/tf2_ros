@@ -1,0 +1,14 @@
+-- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+ - /opt/ros/humble/bin/ament_pep257 --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml
+
+checking ./launch/publish_static_transformom_odom_to_world.launch.py
+checking ./scripts/cam_bot_odom_to_tf_pub.py
+checking ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D200: One-line docstring should fit on one line with quotes (found 3)
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D202: No blank lines allowed after function docstring (found 1)
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D401: First line should be in imperative mood; try rephrasing (found 'This')
+3 errors
+
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml'

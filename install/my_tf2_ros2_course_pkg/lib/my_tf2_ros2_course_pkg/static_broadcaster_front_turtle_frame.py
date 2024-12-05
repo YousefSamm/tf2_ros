@@ -1,0 +1,1 @@
+/home/user/ros2_ws/src/my_tf2_ros2_course_pkg/scripts/static_broadcaster_front_turtle_frame.py

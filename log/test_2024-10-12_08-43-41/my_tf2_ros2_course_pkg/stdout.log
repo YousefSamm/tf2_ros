@@ -1,0 +1,249 @@
+UpdateCTestConfiguration  from :/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/CTestConfiguration.ini
+Parse Config file:/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/CTestConfiguration.ini
+   Site: 2_xterm
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20241012-0843 - Experimental
+UpdateCTestConfiguration  from :/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/CTestConfiguration.ini
+Parse Config file:/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/CTestConfiguration.ini
+Test project /home/user/ros2_ws/build/my_tf2_ros2_course_pkg
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: flake8
+
+1: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_flake8/flake8.txt" "--command" "/opt/ros/humble/bin/ament_flake8" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml"
+1: Test timeout computed to be: 60
+1: -- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+1:  - /opt/ros/humble/bin/ament_flake8 --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml
+1: import sys
+1: ^
+1: import rclpy 
+1:             ^
+1: from rclpy.node import Node 
+1:                            ^
+1: class CamBotOdomToTF(Node):
+1: ^
+1:         self.transform_stamped=TransformStamped()
+1:                               ^
+1:         self.transform_stamped.header.frame_id="world"
+1:                                               ^
+1:         self.transform_stamped.child_frame_id= self._robot_base_frame
+1:                                              ^
+1:         self.subscriber=self.create_subscription(Odometry, '/cam_bot_odom', self.odom_callback, QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.VOLATILE))
+1:                        ^
+1:         self.subscriber=self.create_subscription(Odometry, '/cam_bot_odom', self.odom_callback, QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.VOLATILE))
+1:                                                                                                    ^
+1:         self.br=tf2_ros.TransformBroadcaster(self)
+1:                ^
+1:     def odom_callback(self, msg):
+1:     ^
+1:         self.cam_bot_odom=msg
+1:                          ^
+1:         self.get_logger().info("Odom, Value: %s" %(self.cam_bot_odom))
+1:                                                   ^
+1:     def broadcast_new_tf(self):
+1:     ^
+1:         position=self.cam_bot_odom.pose.pose.position
+1:                 ^
+1:         orientation=self.cam_bot_odom.pose.pose.orientation
+1:                    ^
+1:         self.transform_stamped.header.stamp=self.get_clock().now().to_msg()
+1:                                            ^
+1:         self.transform_stamped.transform.translation.x=position.x
+1:                                                       ^
+1:         self.transform_stamped.transform.translation.y=position.y
+1:                                                       ^
+1:         self.transform_stamped.transform.translation.z=position.z
+1:                                                       ^
+1:         self.transform_stamped.transform.rotation.x=orientation.x
+1:                                                    ^
+1:         self.transform_stamped.transform.rotation.y=orientation.y
+1:                                                    ^
+1:         self.transform_stamped.transform.rotation.z=orientation.z
+1:                                                    ^
+1:         self.transform_stamped.transform.rotation.w=orientation.w
+1:                                                    ^
+1: def main(arg=None):
+1: ^
+1:     odom_to_tf_obj=CamBotOdomToTF()
+1:                   ^
+1: if __name__=='__main__':
+1: ^
+1: if __name__=='__main__':
+1:            ^
+1:     main()          ^
+1: import sys
+1: ^
+1:         
+1: ^
+1:         # A `TransformStamped` object is a ROS message that represents a transformation between two frames.
+1:                                                                                                    ^
+1:         # The `header.frame_id` attribute specifies the frame in which the transformation is defined.
+1:                                                                                                    ^
+1:             QoSProfile(depth=1, durability=DurabilityPolicy.VOLATILE, reliability=ReliabilityPolicy.BEST_EFFORT))
+1:                                                                                                    ^
+1: if __name__ == '__main__':
+1: ^
+1: 19    E225 missing whitespace around operator
+1: 2     E301 expected 1 blank line, found 0
+1: 2     E302 expected 2 blank lines, found 1
+1: 2     E305 expected 2 blank lines after class or function definition, found 0
+1: 4     E501 line too long (194 > 99 characters)
+1: 2     F401 'sys' imported but unused
+1: 2     W291 trailing whitespace
+1: 1     W292 no newline at end of file
+1: 1     W293 blank line contains whitespace
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:2:1: F401 'sys' imported but unused
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:3:13: W291 trailing whitespace
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:4:28: W291 trailing whitespace
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:10:1: E302 expected 2 blank lines, found 1
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:14:31: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:15:47: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:16:46: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:17:24: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:17:100: E501 line too long (194 > 99 characters)
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:18:16: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:20:5: E301 expected 1 blank line, found 0
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:21:26: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:22:51: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:24:5: E301 expected 1 blank line, found 0
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:25:17: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:26:20: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:27:44: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:28:55: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:29:55: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:30:55: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:32:52: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:33:52: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:34:52: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:35:52: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:37:1: E302 expected 2 blank lines, found 0
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:39:19: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:41:1: E305 expected 2 blank lines after class or function definition, found 0
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:41:12: E225 missing whitespace around operator
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub.py:42:11: W292 no newline at end of file
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:3:1: F401 'sys' imported but unused
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:18:1: W293 blank line contains whitespace
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:20:100: E501 line too long (107 > 99 characters)
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:23:100: E501 line too long (101 > 99 characters)
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:35:100: E501 line too long (113 > 99 characters)
+1: 
+1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:86:1: E305 expected 2 blank lines after class or function definition, found 1
+1: 
+1: 
+1: 3 files checked
+1: 35 errors
+1: 
+1: 'E'-type errors: 29
+1: 'F'-type errors: 2
+1: 'W'-type errors: 4
+1: 
+1: Checked files:
+1: 
+1: * ./launch/publish_static_transformom_odom_to_world.launch.py
+1: * ./scripts/cam_bot_odom_to_tf_pub.py
+1: * ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py
+1: -- run_test.py: return code 1
+1: -- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml'
+1/4 Test #1: flake8 ...........................***Failed    0.45 sec
+test 2
+    Start 2: lint_cmake
+
+2: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml"
+2: Test timeout computed to be: 60
+2: -- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+2:  - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml
+2: CMakeLists.txt:26: Tab found; please use spaces [whitespace/tabs]
+2: CMakeLists.txt:27: Tab found; please use spaces [whitespace/tabs]
+2: CMakeLists.txt:28: Tab found; please use spaces [whitespace/tabs]
+2: 
+2: 
+2: 3 errors
+2: -- run_test.py: return code 1
+2: -- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml'
+2/4 Test #2: lint_cmake .......................***Failed    0.21 sec
+test 3
+    Start 3: pep257
+
+3: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_pep257/pep257.txt" "--command" "/opt/ros/humble/bin/ament_pep257" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml"
+3: Test timeout computed to be: 60
+3: -- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+3:  - /opt/ros/humble/bin/ament_pep257 --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml
+3: checking ./launch/publish_static_transformom_odom_to_world.launch.py
+3: checking ./scripts/cam_bot_odom_to_tf_pub.py
+3: checking ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py
+3: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D200: One-line docstring should fit on one line with quotes (found 3)
+3: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D202: No blank lines allowed after function docstring (found 1)
+3: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D401: First line should be in imperative mood; try rephrasing (found 'This')
+3: 3 errors
+3: -- run_test.py: return code 1
+3: -- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml'
+3/4 Test #3: pep257 ...........................***Failed    0.61 sec
+test 4
+    Start 4: xmllint
+
+4: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml"
+4: Test timeout computed to be: 60
+4: -- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+4:  - /opt/ros/humble/bin/ament_xmllint --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml
+4: File 'package.xml' is valid
+4: 
+4: No problems found
+4: -- run_test.py: return code 0
+4: -- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml'
+4/4 Test #4: xmllint ..........................   Passed    0.84 sec
+
+25% tests passed[0;0m, [0;31m3 tests failed[0;0m out of 4
+
+Label Time Summary:
+flake8        =   0.45 sec*proc (1 test)
+lint_cmake    =   0.21 sec*proc (1 test)
+linter        =   2.11 sec*proc (4 tests)
+pep257        =   0.61 sec*proc (1 test)
+xmllint       =   0.84 sec*proc (1 test)
+
+Total Test time (real) =   2.11 sec
+
+The following tests FAILED:
+	[0;31m  1 - flake8 (Failed)[0;0m
+	[0;31m  2 - lint_cmake (Failed)[0;0m
+	[0;31m  3 - pep257 (Failed)[0;0m

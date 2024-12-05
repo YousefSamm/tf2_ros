@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="my_tf2_ros2_course_pkg.flake8"
+  tests="35"
+  errors="0"
+  failures="35"
+  time="0.216"
+>
+  <testcase
+    name="F401 (./scripts/cam_bot_odom_to_tf_pub.py:2:1)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="'sys' imported but unused:&#10;import sys&#10;"/>
+  </testcase>
+  <testcase
+    name="W291 (./scripts/cam_bot_odom_to_tf_pub.py:3:13)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="trailing whitespace:&#10;import rclpy &#10;"/>
+  </testcase>
+  <testcase
+    name="W291 (./scripts/cam_bot_odom_to_tf_pub.py:4:28)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="trailing whitespace:&#10;from rclpy.node import Node &#10;"/>
+  </testcase>
+  <testcase
+    name="E302 (./scripts/cam_bot_odom_to_tf_pub.py:10:1)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="expected 2 blank lines, found 1:&#10;class CamBotOdomToTF(Node):&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:14:31)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped=TransformStamped()&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:15:47)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message='missing whitespace around operator:&#10;        self.transform_stamped.header.frame_id="world"&#10;'/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:16:46)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.child_frame_id= self._robot_base_frame&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:17:24)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.subscriber=self.create_subscription(Odometry, '/cam_bot_odom', self.odom_callback, QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.VOLATILE))&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/cam_bot_odom_to_tf_pub.py:17:100)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="line too long (194 &gt; 99 characters):&#10;        self.subscriber=self.create_subscription(Odometry, '/cam_bot_odom', self.odom_callback, QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.VOLATILE))&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:18:16)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.br=tf2_ros.TransformBroadcaster(self)&#10;"/>
+  </testcase>
+  <testcase
+    name="E301 (./scripts/cam_bot_odom_to_tf_pub.py:20:5)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="expected 1 blank line, found 0:&#10;    def odom_callback(self, msg):&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:21:26)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.cam_bot_odom=msg&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:22:51)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message='missing whitespace around operator:&#10;        self.get_logger().info("Odom, Value: %s" %(self.cam_bot_odom))&#10;'/>
+  </testcase>
+  <testcase
+    name="E301 (./scripts/cam_bot_odom_to_tf_pub.py:24:5)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="expected 1 blank line, found 0:&#10;    def broadcast_new_tf(self):&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:25:17)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        position=self.cam_bot_odom.pose.pose.position&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:26:20)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        orientation=self.cam_bot_odom.pose.pose.orientation&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:27:44)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.header.stamp=self.get_clock().now().to_msg()&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:28:55)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.transform.translation.x=position.x&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:29:55)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.transform.translation.y=position.y&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:30:55)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.transform.translation.z=position.z&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:32:52)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.transform.rotation.x=orientation.x&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:33:52)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.transform.rotation.y=orientation.y&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:34:52)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.transform.rotation.z=orientation.z&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:35:52)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;        self.transform_stamped.transform.rotation.w=orientation.w&#10;"/>
+  </testcase>
+  <testcase
+    name="E302 (./scripts/cam_bot_odom_to_tf_pub.py:37:1)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="expected 2 blank lines, found 0:&#10;def main(arg=None):&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:39:19)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;    odom_to_tf_obj=CamBotOdomToTF()&#10;"/>
+  </testcase>
+  <testcase
+    name="E305 (./scripts/cam_bot_odom_to_tf_pub.py:41:1)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="expected 2 blank lines after class or function definition, found 0:&#10;if __name__=='__main__':&#10;"/>
+  </testcase>
+  <testcase
+    name="E225 (./scripts/cam_bot_odom_to_tf_pub.py:41:12)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="missing whitespace around operator:&#10;if __name__=='__main__':&#10;"/>
+  </testcase>
+  <testcase
+    name="W292 (./scripts/cam_bot_odom_to_tf_pub.py:42:11)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="no newline at end of file:&#10;    main()"/>
+  </testcase>
+  <testcase
+    name="F401 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:3:1)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="'sys' imported but unused:&#10;import sys&#10;"/>
+  </testcase>
+  <testcase
+    name="W293 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:18:1)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="blank line contains whitespace:&#10;        &#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:20:100)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="line too long (107 &gt; 99 characters):&#10;        # A `TransformStamped` object is a ROS message that represents a transformation between two frames.&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:23:100)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="line too long (101 &gt; 99 characters):&#10;        # The `header.frame_id` attribute specifies the frame in which the transformation is defined.&#10;"/>
+  </testcase>
+  <testcase
+    name="E501 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:35:100)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="line too long (113 &gt; 99 characters):&#10;            QoSProfile(depth=1, durability=DurabilityPolicy.VOLATILE, reliability=ReliabilityPolicy.BEST_EFFORT))&#10;"/>
+  </testcase>
+  <testcase
+    name="E305 (./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:86:1)"
+    classname="my_tf2_ros2_course_pkg.flake8"
+  >
+      <failure message="expected 2 blank lines after class or function definition, found 1:&#10;if __name__ == '__main__':&#10;"/>
+  </testcase>
+  <system-out>Checked files:
+* ./launch/publish_static_transformom_odom_to_world.launch.py
+* ./scripts/cam_bot_odom_to_tf_pub.py
+* ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py</system-out>
+</testsuite>

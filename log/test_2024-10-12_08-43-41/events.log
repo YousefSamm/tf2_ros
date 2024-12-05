@@ -1,0 +1,295 @@
+[0.000000] (-) TimerEvent: {}
+[0.001357] (my_tf2_ros2_course_pkg) JobQueued: {'identifier': 'my_tf2_ros2_course_pkg', 'dependencies': OrderedDict([('my_tf2_ros2_course_pkg', '/home/user/ros2_ws/install/my_tf2_ros2_course_pkg')])}
+[0.001490] (my_tf2_ros2_course_pkg) JobStarted: {'identifier': 'my_tf2_ros2_course_pkg'}
+[0.099984] (-) TimerEvent: {}
+[0.200270] (-) TimerEvent: {}
+[0.300630] (-) TimerEvent: {}
+[0.401109] (-) TimerEvent: {}
+[0.501453] (-) TimerEvent: {}
+[0.601834] (-) TimerEvent: {}
+[0.702461] (-) TimerEvent: {}
+[0.802841] (-) TimerEvent: {}
+[0.903175] (-) TimerEvent: {}
+[1.003558] (-) TimerEvent: {}
+[1.103900] (-) TimerEvent: {}
+[1.204400] (-) TimerEvent: {}
+[1.304758] (-) TimerEvent: {}
+[1.398937] (my_tf2_ros2_course_pkg) Command: {'cmd': ['/usr/bin/ctest', '-C', 'Release', '-D', 'ExperimentalTest', '--no-compress-output', '-V', '--force-new-ctest-process'], 'cwd': '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg', 'env': OrderedDict([('ROS_VERSION', '2'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('GAZEBO_MASTER_URI', 'http://2_simulation:11345'), ('PKG_CONFIG_PATH', ':/opt/ros/humble/lib/pkgconfig:/opt/ros/humble/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/humble/lib/pkgconfig:/opt/ros/humble/lib/x86_64-linux-gnu/pkgconfig'), ('ROS_PYTHON_VERSION', '3'), ('HOSTNAME', '2_xterm'), ('PWD', '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg'), ('PORT', '4000'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('ROS_IP', ''), ('HOME', '/home/user'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('LANG', 'en_US.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/user/ros2_ws/install/my_tf2_ros2_course_pkg:/opt/ros/humble'), ('CMAKE_PREFIX_PATH', '/home/user/ros2_ws/install/my_tf2_ros2_course_pkg:/opt/ros/humble:/opt/ros/humble'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo'), ('GAZEBO_MASTER_PORT', '11345'), ('NVM_DIR', '/usr/local/share/shell/.nvm'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/simulations/public_sim_ws/src/all/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/all/kinematics_course_utils/kinematics'), ('COLCON', '1'), ('TERM', 'xterm-color'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('SNAPCRAFT_BUILD_ENVIRONMENT', 'host'), ('GAZEBO_MASTER_HOSTNAME', '2_simulation'), ('DISPLAY', ':1'), ('SHLVL', '2'), ('NVM_CD_FLAGS', ''), ('ROS_MASTER_URI', 'http://2_simulation:11311'), ('ROS_HOSTNAME', '2_xterm'), ('LD_LIBRARY_PATH', '/home/user/catkin_ws/devel/lib:/home/simulations/public_sim_ws/devel/lib:/opt/ros/humble/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/catkin_ws/devel/lib:/home/simulations/public_sim_ws/devel/lib:/opt/ros/humble/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('ROS_LOCALHOST_ONLY', '0'), ('SLOT_SHELL_START_ID', '0'), ('SLOT_PREFIX', '287c26f4-5f76-4d8d-a6fb-9a5810939859'), ('LC_ALL', 'C'), ('SOURCE_ROS1_WS', 'True'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox'), ('SLOT_JENKINS_PORT', '25390'), ('SLOT_SYSTEMD', 'False'), ('PATH', '/opt/ros/humble/bin:/opt/ros/humble/bin:/opt/ros/humble/bin:/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin'), ('SELECTED_ROS_DISTRO', 'humble'), ('NVM_BIN', '/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin'), ('NODE_VERSION', 'v8.17.0'), ('DEBIAN_FRONTEND', 'noninteractive'), ('ROS_DISTRO', 'humble'), ('GAZEBO_VERBOSE', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('OLDPWD', '/home/user'), ('SOURCE_ROS2_WS', ''), ('SLOT_ROSBRIDGE_PORT', '20002'), ('_', '/usr/bin/env')]), 'shell': False}
+[1.404967] (-) TimerEvent: {}
+[1.411017] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/CTestConfiguration.ini\n'}
+[1.411306] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Parse Config file:/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/CTestConfiguration.ini\n'}
+[1.411461] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'   Site: 2_xterm\n'}
+[1.411599] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'   Build name: (empty)\n'}
+[1.411857] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b' Add coverage exclude regular expressions.\n'}
+[1.412287] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Create new tag: 20241012-0843 - Experimental\n'}
+[1.412410] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/CTestConfiguration.ini\n'}
+[1.412514] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Parse Config file:/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/CTestConfiguration.ini\n'}
+[1.412630] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Test project /home/user/ros2_ws/build/my_tf2_ros2_course_pkg\n'}
+[1.412743] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Constructing a list of tests\n'}
+[1.412866] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Done constructing a list of tests\n'}
+[1.412977] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Updating test list for fixtures\n'}
+[1.413078] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Added 0 tests to meet fixture requirements\n'}
+[1.413186] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Checking test dependency graph...\n'}
+[1.413287] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Checking test dependency graph end\n'}
+[1.413388] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'test 1\n'}
+[1.413693] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'    Start 1: flake8\n'}
+[1.413813] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\n'}
+[1.413941] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_flake8/flake8.txt" "--command" "/opt/ros/humble/bin/ament_flake8" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml"\n'}
+[1.414185] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: Test timeout computed to be: 60\n'}
+[1.487736] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: -- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':\n"}
+[1.487967] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:  - /opt/ros/humble/bin/ament_flake8 --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml\n'}
+[1.505074] (-) TimerEvent: {}
+[1.605375] (-) TimerEvent: {}
+[1.705708] (-) TimerEvent: {}
+[1.806055] (-) TimerEvent: {}
+[1.832438] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: import sys\n'}
+[1.833035] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ^\n'}
+[1.834009] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: import rclpy \n'}
+[1.834129] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:             ^\n'}
+[1.834208] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: from rclpy.node import Node \n'}
+[1.834321] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                            ^\n'}
+[1.834439] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: class CamBotOdomToTF(Node):\n'}
+[1.834538] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ^\n'}
+[1.834621] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped=TransformStamped()\n'}
+[1.834709] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                               ^\n'}
+[1.834803] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.header.frame_id="world"\n'}
+[1.834887] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                               ^\n'}
+[1.834955] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.child_frame_id= self._robot_base_frame\n'}
+[1.835019] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                              ^\n'}
+[1.835095] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1:         self.subscriber=self.create_subscription(Odometry, '/cam_bot_odom', self.odom_callback, QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.VOLATILE))\n"}
+[1.835173] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                        ^\n'}
+[1.835279] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1:         self.subscriber=self.create_subscription(Odometry, '/cam_bot_odom', self.odom_callback, QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.VOLATILE))\n"}
+[1.835391] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                                                                    ^\n'}
+[1.835516] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.br=tf2_ros.TransformBroadcaster(self)\n'}
+[1.835592] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                ^\n'}
+[1.835675] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:     def odom_callback(self, msg):\n'}
+[1.835770] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:     ^\n'}
+[1.835874] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.cam_bot_odom=msg\n'}
+[1.835979] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                          ^\n'}
+[1.836079] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.get_logger().info("Odom, Value: %s" %(self.cam_bot_odom))\n'}
+[1.836174] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                   ^\n'}
+[1.836304] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:     def broadcast_new_tf(self):\n'}
+[1.836428] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:     ^\n'}
+[1.836540] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         position=self.cam_bot_odom.pose.pose.position\n'}
+[1.836630] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                 ^\n'}
+[1.836743] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         orientation=self.cam_bot_odom.pose.pose.orientation\n'}
+[1.836844] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                    ^\n'}
+[1.836947] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.header.stamp=self.get_clock().now().to_msg()\n'}
+[1.837078] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                            ^\n'}
+[1.837231] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.transform.translation.x=position.x\n'}
+[1.837556] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                       ^\n'}
+[1.837644] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.transform.translation.y=position.y\n'}
+[1.837727] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                       ^\n'}
+[1.837823] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.transform.translation.z=position.z\n'}
+[1.837938] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                       ^\n'}
+[1.838050] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.transform.rotation.x=orientation.x\n'}
+[1.838154] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                    ^\n'}
+[1.838260] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.transform.rotation.y=orientation.y\n'}
+[1.838371] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                    ^\n'}
+[1.838484] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.transform.rotation.z=orientation.z\n'}
+[1.838583] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                    ^\n'}
+[1.838694] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         self.transform_stamped.transform.rotation.w=orientation.w\n'}
+[1.838800] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                    ^\n'}
+[1.838909] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: def main(arg=None):\n'}
+[1.838987] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ^\n'}
+[1.839081] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:     odom_to_tf_obj=CamBotOdomToTF()\n'}
+[1.839175] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                   ^\n'}
+[1.839260] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: if __name__=='__main__':\n"}
+[1.839350] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ^\n'}
+[1.839466] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: if __name__=='__main__':\n"}
+[1.839570] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:            ^\n'}
+[1.839682] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:     main()          ^\n'}
+[1.839793] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: import sys\n'}
+[1.839896] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ^\n'}
+[1.839995] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         \n'}
+[1.840104] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ^\n'}
+[1.840228] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         # A `TransformStamped` object is a ROS message that represents a transformation between two frames.\n'}
+[1.840332] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                                                                    ^\n'}
+[1.840433] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:         # The `header.frame_id` attribute specifies the frame in which the transformation is defined.\n'}
+[1.840502] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                                                                    ^\n'}
+[1.840570] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:             QoSProfile(depth=1, durability=DurabilityPolicy.VOLATILE, reliability=ReliabilityPolicy.BEST_EFFORT))\n'}
+[1.840656] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1:                                                                                                    ^\n'}
+[1.840783] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: if __name__ == '__main__':\n"}
+[1.840900] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ^\n'}
+[1.841004] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 19    E225 missing whitespace around operator\n'}
+[1.841117] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 2     E301 expected 1 blank line, found 0\n'}
+[1.841238] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 2     E302 expected 2 blank lines, found 1\n'}
+[1.841372] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 2     E305 expected 2 blank lines after class or function definition, found 0\n'}
+[1.841492] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 4     E501 line too long (194 > 99 characters)\n'}
+[1.841607] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: 2     F401 'sys' imported but unused\n"}
+[1.841726] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 2     W291 trailing whitespace\n'}
+[1.841835] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 1     W292 no newline at end of file\n'}
+[1.841953] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 1     W293 blank line contains whitespace\n'}
+[1.842056] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.842136] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: ./scripts/cam_bot_odom_to_tf_pub.py:2:1: F401 'sys' imported but unused\n"}
+[1.842205] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.842304] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:3:13: W291 trailing whitespace\n'}
+[1.842411] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.842517] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:4:28: W291 trailing whitespace\n'}
+[1.842623] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.842748] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:10:1: E302 expected 2 blank lines, found 1\n'}
+[1.842849] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.842957] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:14:31: E225 missing whitespace around operator\n'}
+[1.843033] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.843097] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:15:47: E225 missing whitespace around operator\n'}
+[1.843156] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.843221] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:16:46: E225 missing whitespace around operator\n'}
+[1.843283] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.843351] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:17:24: E225 missing whitespace around operator\n'}
+[1.843455] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.843559] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:17:100: E501 line too long (194 > 99 characters)\n'}
+[1.843665] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.843775] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:18:16: E225 missing whitespace around operator\n'}
+[1.843883] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.843978] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:20:5: E301 expected 1 blank line, found 0\n'}
+[1.844060] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.844138] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:21:26: E225 missing whitespace around operator\n'}
+[1.844225] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.844298] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:22:51: E225 missing whitespace around operator\n'}
+[1.844407] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.844510] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:24:5: E301 expected 1 blank line, found 0\n'}
+[1.844584] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.844664] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:25:17: E225 missing whitespace around operator\n'}
+[1.844770] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.844869] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:26:20: E225 missing whitespace around operator\n'}
+[1.844970] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.845055] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:27:44: E225 missing whitespace around operator\n'}
+[1.845158] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.845233] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:28:55: E225 missing whitespace around operator\n'}
+[1.845327] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.845428] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:29:55: E225 missing whitespace around operator\n'}
+[1.845537] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.845647] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:30:55: E225 missing whitespace around operator\n'}
+[1.845749] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.845860] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:32:52: E225 missing whitespace around operator\n'}
+[1.845973] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.846071] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:33:52: E225 missing whitespace around operator\n'}
+[1.846150] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.846232] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:34:52: E225 missing whitespace around operator\n'}
+[1.846331] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.846444] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:35:52: E225 missing whitespace around operator\n'}
+[1.846540] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.846624] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:37:1: E302 expected 2 blank lines, found 0\n'}
+[1.846716] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.846801] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:39:19: E225 missing whitespace around operator\n'}
+[1.846887] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.846975] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:41:1: E305 expected 2 blank lines after class or function definition, found 0\n'}
+[1.847060] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.847140] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:41:12: E225 missing whitespace around operator\n'}
+[1.847223] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.847312] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub.py:42:11: W292 no newline at end of file\n'}
+[1.847409] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.847501] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:3:1: F401 'sys' imported but unused\n"}
+[1.847607] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.847717] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:18:1: W293 blank line contains whitespace\n'}
+[1.847820] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.847906] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:20:100: E501 line too long (107 > 99 characters)\n'}
+[1.847992] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.849165] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:23:100: E501 line too long (101 > 99 characters)\n'}
+[1.849293] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.849453] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:35:100: E501 line too long (113 > 99 characters)\n'}
+[1.849637] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.849739] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:86:1: E305 expected 2 blank lines after class or function definition, found 1\n'}
+[1.849830] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.849924] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.850010] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 3 files checked\n'}
+[1.850108] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: 35 errors\n'}
+[1.850226] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.850335] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: 'E'-type errors: 29\n"}
+[1.850446] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: 'F'-type errors: 2\n"}
+[1.850559] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: 'W'-type errors: 4\n"}
+[1.850761] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.850854] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: Checked files:\n'}
+[1.850936] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: \n'}
+[1.851022] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: * ./launch/publish_static_transformom_odom_to_world.launch.py\n'}
+[1.851131] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: * ./scripts/cam_bot_odom_to_tf_pub.py\n'}
+[1.851250] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: * ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py\n'}
+[1.854387] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1: -- run_test.py: return code 1\n'}
+[1.854587] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"1: -- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml'\n"}
+[1.865008] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'1/4 Test #1: flake8 ...........................***Failed    0.45 sec\n'}
+[1.865232] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'test 2\n'}
+[1.865380] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'    Start 2: lint_cmake\n'}
+[1.865501] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\n'}
+[1.865607] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml"\n'}
+[1.865698] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: Test timeout computed to be: 60\n'}
+[1.906229] (-) TimerEvent: {}
+[1.951235] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"2: -- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':\n"}
+[1.951512] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2:  - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml\n'}
+[2.008762] (-) TimerEvent: {}
+[2.041779] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: CMakeLists.txt:26: Tab found; please use spaces [whitespace/tabs]\n'}
+[2.042041] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: CMakeLists.txt:27: Tab found; please use spaces [whitespace/tabs]\n'}
+[2.042155] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: CMakeLists.txt:28: Tab found; please use spaces [whitespace/tabs]\n'}
+[2.042238] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: \n'}
+[2.042323] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: \n'}
+[2.042403] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: 3 errors\n'}
+[2.054550] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2: -- run_test.py: return code 1\n'}
+[2.054824] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"2: -- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml'\n"}
+[2.070952] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'2/4 Test #2: lint_cmake .......................***Failed    0.21 sec\n'}
+[2.071254] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'test 3\n'}
+[2.071363] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'    Start 3: pep257\n'}
+[2.071440] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\n'}
+[2.071525] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_pep257/pep257.txt" "--command" "/opt/ros/humble/bin/ament_pep257" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml"\n'}
+[2.071653] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: Test timeout computed to be: 60\n'}
+[2.108860] (-) TimerEvent: {}
+[2.144412] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"3: -- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':\n"}
+[2.144660] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3:  - /opt/ros/humble/bin/ament_pep257 --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml\n'}
+[2.209023] (-) TimerEvent: {}
+[2.309383] (-) TimerEvent: {}
+[2.409715] (-) TimerEvent: {}
+[2.510098] (-) TimerEvent: {}
+[2.610473] (-) TimerEvent: {}
+[2.648863] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: checking ./launch/publish_static_transformom_odom_to_world.launch.py\n'}
+[2.649232] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: checking ./scripts/cam_bot_odom_to_tf_pub.py\n'}
+[2.649345] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: checking ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py\n'}
+[2.649449] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D200: One-line docstring should fit on one line with quotes (found 3)\n'}
+[2.649563] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D202: No blank lines allowed after function docstring (found 1)\n'}
+[2.649681] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"3: ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D401: First line should be in imperative mood; try rephrasing (found 'This')\n"}
+[2.649801] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: 3 errors\n'}
+[2.668530] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3: -- run_test.py: return code 1\n'}
+[2.668747] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"3: -- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml'\n"}
+[2.680485] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'3/4 Test #3: pep257 ...........................***Failed    0.61 sec\n'}
+[2.681182] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'test 4\n'}
+[2.681329] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'    Start 4: xmllint\n'}
+[2.681446] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\n'}
+[2.681552] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'4: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml"\n'}
+[2.681666] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'4: Test timeout computed to be: 60\n'}
+[2.710553] (-) TimerEvent: {}
+[2.746700] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"4: -- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':\n"}
+[2.746934] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'4:  - /opt/ros/humble/bin/ament_xmllint --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml\n'}
+[2.810670] (-) TimerEvent: {}
+[2.911354] (-) TimerEvent: {}
+[3.011682] (-) TimerEvent: {}
+[3.112006] (-) TimerEvent: {}
+[3.212390] (-) TimerEvent: {}
+[3.312951] (-) TimerEvent: {}
+[3.413374] (-) TimerEvent: {}
+[3.494729] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"4: File 'package.xml' is valid\n"}
+[3.494937] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'4: \n'}
+[3.495049] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'4: No problems found\n'}
+[3.509060] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'4: -- run_test.py: return code 0\n'}
+[3.509299] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b"4: -- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml'\n"}
+[3.513467] (-) TimerEvent: {}
+[3.521193] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'4/4 Test #4: xmllint ..........................   Passed    0.84 sec\n'}
+[3.521690] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\n'}
+[3.521907] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'25% tests passed\x1b[0;0m, \x1b[0;31m3 tests failed\x1b[0;0m out of 4\n'}
+[3.521990] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\n'}
+[3.522045] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Label Time Summary:\n'}
+[3.522097] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'flake8        =   0.45 sec*proc (1 test)\n'}
+[3.522176] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'lint_cmake    =   0.21 sec*proc (1 test)\n'}
+[3.522270] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'linter        =   2.11 sec*proc (4 tests)\n'}
+[3.522387] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'pep257        =   0.61 sec*proc (1 test)\n'}
+[3.522473] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'xmllint       =   0.84 sec*proc (1 test)\n'}
+[3.522547] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\n'}
+[3.522623] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'Total Test time (real) =   2.11 sec\n'}
+[3.522718] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\n'}
+[3.522804] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'The following tests FAILED:\n'}
+[3.522890] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\t\x1b[0;31m  1 - flake8 (Failed)\x1b[0;0m\n'}
+[3.522981] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\t\x1b[0;31m  2 - lint_cmake (Failed)\x1b[0;0m\n'}
+[3.523050] (my_tf2_ros2_course_pkg) StdoutLine: {'line': b'\t\x1b[0;31m  3 - pep257 (Failed)\x1b[0;0m\n'}
+[3.544256] (my_tf2_ros2_course_pkg) StderrLine: {'line': b'Errors while running CTest\n'}
+[3.544449] (my_tf2_ros2_course_pkg) StderrLine: {'line': b'Output from these tests are in: /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/Testing/Temporary/LastTest.log\n'}
+[3.544583] (my_tf2_ros2_course_pkg) StderrLine: {'line': b'Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.\n'}
+[3.546000] (my_tf2_ros2_course_pkg) CommandEnded: {'returncode': 8}
+[3.546892] (my_tf2_ros2_course_pkg) TestFailure: {'identifier': 'my_tf2_ros2_course_pkg'}
+[3.546992] (my_tf2_ros2_course_pkg) JobEnded: {'identifier': 'my_tf2_ros2_course_pkg', 'rc': 0}
+[3.547640] (-) EventReactorShutdown: {}

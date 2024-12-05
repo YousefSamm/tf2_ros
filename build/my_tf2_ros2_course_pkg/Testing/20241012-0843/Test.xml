@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20241012-0843-Experimental"
+	Name="2_xterm"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="11.2.0"
+	OSName="Linux"
+	Hostname="2_xterm"
+	OSRelease="4.15.0-1009-aws"
+	OSVersion="#9-Ubuntu SMP Wed May 16 15:22:54 UTC 2018"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="63"
+	ProcessorCacheSize="25600"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="15031"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2900.04"
+	>
+	<Testing>
+		<StartDateTime>Oct 12 08:43 UTC</StartDateTime>
+		<StartTestTime>1728722624</StartTestTime>
+		<TestList>
+			<Test>./flake8</Test>
+			<Test>./lint_cmake</Test>
+			<Test>./pep257</Test>
+			<Test>./xmllint</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>flake8</Name>
+			<Path>.</Path>
+			<FullName>./flake8</FullName>
+			<FullCommandLine>/usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_flake8/flake8.txt" "--command" "/opt/ros/humble/bin/ament_flake8" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.452685</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_flake8/flake8.txt" "--command" "/opt/ros/humble/bin/ament_flake8" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+ - /opt/ros/humble/bin/ament_flake8 --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml
+import sys
+^
+import rclpy 
+            ^
+from rclpy.node import Node 
+                           ^
+class CamBotOdomToTF(Node):
+^
+        self.transform_stamped=TransformStamped()
+                              ^
+        self.transform_stamped.header.frame_id="world"
+                                              ^
+        self.transform_stamped.child_frame_id= self._robot_base_frame
+                                             ^
+        self.subscriber=self.create_subscription(Odometry, '/cam_bot_odom', self.odom_callback, QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.VOLATILE))
+                       ^
+        self.subscriber=self.create_subscription(Odometry, '/cam_bot_odom', self.odom_callback, QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.VOLATILE))
+                                                                                                   ^
+        self.br=tf2_ros.TransformBroadcaster(self)
+               ^
+    def odom_callback(self, msg):
+    ^
+        self.cam_bot_odom=msg
+                         ^
+        self.get_logger().info("Odom, Value: %s" %(self.cam_bot_odom))
+                                                  ^
+    def broadcast_new_tf(self):
+    ^
+        position=self.cam_bot_odom.pose.pose.position
+                ^
+        orientation=self.cam_bot_odom.pose.pose.orientation
+                   ^
+        self.transform_stamped.header.stamp=self.get_clock().now().to_msg()
+                                           ^
+        self.transform_stamped.transform.translation.x=position.x
+                                                      ^
+        self.transform_stamped.transform.translation.y=position.y
+                                                      ^
+        self.transform_stamped.transform.translation.z=position.z
+                                                      ^
+        self.transform_stamped.transform.rotation.x=orientation.x
+                                                   ^
+        self.transform_stamped.transform.rotation.y=orientation.y
+                                                   ^
+        self.transform_stamped.transform.rotation.z=orientation.z
+                                                   ^
+        self.transform_stamped.transform.rotation.w=orientation.w
+                                                   ^
+def main(arg=None):
+^
+    odom_to_tf_obj=CamBotOdomToTF()
+                  ^
+if __name__=='__main__':
+^
+if __name__=='__main__':
+           ^
+    main()          ^
+import sys
+^
+        
+^
+        # A `TransformStamped` object is a ROS message that represents a transformation between two frames.
+                                                                                                   ^
+        # The `header.frame_id` attribute specifies the frame in which the transformation is defined.
+                                                                                                   ^
+            QoSProfile(depth=1, durability=DurabilityPolicy.VOLATILE, reliability=ReliabilityPolicy.BEST_EFFORT))
+                                                                                                   ^
+if __name__ == '__main__':
+^
+19    E225 missing whitespace around operator
+2     E301 expected 1 blank line, found 0
+2     E302 expected 2 blank lines, found 1
+2     E305 expected 2 blank lines after class or function definition, found 0
+4     E501 line too long (194 &gt; 99 characters)
+2     F401 'sys' imported but unused
+2     W291 trailing whitespace
+1     W292 no newline at end of file
+1     W293 blank line contains whitespace
+
+./scripts/cam_bot_odom_to_tf_pub.py:2:1: F401 'sys' imported but unused
+
+./scripts/cam_bot_odom_to_tf_pub.py:3:13: W291 trailing whitespace
+
+./scripts/cam_bot_odom_to_tf_pub.py:4:28: W291 trailing whitespace
+
+./scripts/cam_bot_odom_to_tf_pub.py:10:1: E302 expected 2 blank lines, found 1
+
+./scripts/cam_bot_odom_to_tf_pub.py:14:31: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:15:47: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:16:46: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:17:24: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:17:100: E501 line too long (194 &gt; 99 characters)
+
+./scripts/cam_bot_odom_to_tf_pub.py:18:16: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:20:5: E301 expected 1 blank line, found 0
+
+./scripts/cam_bot_odom_to_tf_pub.py:21:26: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:22:51: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:24:5: E301 expected 1 blank line, found 0
+
+./scripts/cam_bot_odom_to_tf_pub.py:25:17: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:26:20: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:27:44: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:28:55: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:29:55: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:30:55: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:32:52: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:33:52: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:34:52: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:35:52: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:37:1: E302 expected 2 blank lines, found 0
+
+./scripts/cam_bot_odom_to_tf_pub.py:39:19: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:41:1: E305 expected 2 blank lines after class or function definition, found 0
+
+./scripts/cam_bot_odom_to_tf_pub.py:41:12: E225 missing whitespace around operator
+
+./scripts/cam_bot_odom_to_tf_pub.py:42:11: W292 no newline at end of file
+
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:3:1: F401 'sys' imported but unused
+
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:18:1: W293 blank line contains whitespace
+
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:20:100: E501 line too long (107 &gt; 99 characters)
+
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:23:100: E501 line too long (101 &gt; 99 characters)
+
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:35:100: E501 line too long (113 &gt; 99 characters)
+
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:86:1: E305 expected 2 blank lines after class or function definition, found 1
+
+
+3 files checked
+35 errors
+
+'E'-type errors: 29
+'F'-type errors: 2
+'W'-type errors: 4
+
+Checked files:
+
+* ./launch/publish_static_transformom_odom_to_world.launch.py
+* ./scripts/cam_bot_odom_to_tf_pub.py
+* ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/flake8.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>flake8</Label>
+				<Label>linter</Label>
+			</Labels>
+		</Test>
+		<Test Status="failed">
+			<Name>lint_cmake</Name>
+			<Path>.</Path>
+			<FullName>./lint_cmake</FullName>
+			<FullCommandLine>/usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.205494</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+ - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml
+CMakeLists.txt:26: Tab found; please use spaces [whitespace/tabs]
+CMakeLists.txt:27: Tab found; please use spaces [whitespace/tabs]
+CMakeLists.txt:28: Tab found; please use spaces [whitespace/tabs]
+
+
+3 errors
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/lint_cmake.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>lint_cmake</Label>
+				<Label>linter</Label>
+			</Labels>
+		</Test>
+		<Test Status="failed">
+			<Name>pep257</Name>
+			<Path>.</Path>
+			<FullName>./pep257</FullName>
+			<FullCommandLine>/usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_pep257/pep257.txt" "--command" "/opt/ros/humble/bin/ament_pep257" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.609171</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_pep257/pep257.txt" "--command" "/opt/ros/humble/bin/ament_pep257" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+ - /opt/ros/humble/bin/ament_pep257 --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml
+checking ./launch/publish_static_transformom_odom_to_world.launch.py
+checking ./scripts/cam_bot_odom_to_tf_pub.py
+checking ./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D200: One-line docstring should fit on one line with quotes (found 3)
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D202: No blank lines allowed after function docstring (found 1)
+./scripts/cam_bot_odom_to_tf_pub_late_tf_fixed.py:50 in public method `broadcast_new_tf`: D401: First line should be in imperative mood; try rephrasing (found 'This')
+3 errors
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/pep257.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>linter</Label>
+				<Label>pep257</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>xmllint</Name>
+			<Path>.</Path>
+			<FullName>./xmllint</FullName>
+			<FullCommandLine>/usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.840384</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml" "--package-name" "my_tf2_ros2_course_pkg" "--output-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/user/ros2_ws/src/my_tf2_ros2_course_pkg':
+ - /opt/ros/humble/bin/ament_xmllint --xunit-file /home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml
+File 'package.xml' is valid
+
+No problems found
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/user/ros2_ws/build/my_tf2_ros2_course_pkg/test_results/my_tf2_ros2_course_pkg/xmllint.xunit.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>linter</Label>
+				<Label>xmllint</Label>
+			</Labels>
+		</Test>
+		<EndDateTime>Oct 12 08:43 UTC</EndDateTime>
+		<EndTestTime>1728722626</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
